@@ -20,8 +20,15 @@ TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300);
 
 
 void setup() {
-  // put your setup code here, to run once:
-
+    Serial.begin(9600);
+    uint16_t ID = tft.readID();
+    if (ID == 0xD3D3) ID = 0x9486; // write-only shield
+    tft.begin(ID);
+    tft.setRotation(0);            //PORTRAIT
+    tft.fillScreen(BLACK);
+    tft.fillRect(210, 0, 105, 480, RED);
+    tft.fillRect(105, 0, 105, 480, BLUE);
+    tft.fillRect(0, 0, 105, 480, GREEN);
 }
 
 void loop() {
