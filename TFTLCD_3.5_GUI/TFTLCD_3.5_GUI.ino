@@ -32,6 +32,7 @@ void setup() {
     tft.fillRect(0, 210, 480, 105, RED);  //button for OPT 3
     tft.fillRect(0, 105, 480, 105, BLUE); //button for OPT 2
     tft.fillRect(0, 0, 480, 105, GREEN);  //button for OPT 1
+    tft.fillRect(0, 300, 20, 20, BLACK);  //button for OPT 1
 
     //Print Text for buttons
     tft.setCursor(190,40);
