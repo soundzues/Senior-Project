@@ -18,7 +18,7 @@ const int TS_LEFT = 907, TS_RT = 136, TS_TOP = 942, TS_BOT = 139;
 
 TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300); //touch screen init
 
-Adafruit_GFX_Button on_btn, off_btn; //buttons init
+Adafruit_GFX_Button opt1, opt2, opt3; //buttons init
 
 int pixel_x, pixel_y;     //Touch_getXY() updates global vars
 
@@ -48,38 +48,83 @@ void setup() {
     //Black Background
     tft.fillScreen(BLACK);
 
-    on_btn.initButton(&tft,  240, 55, 480, 105, WHITE, CYAN, BLACK, "ON", 2);
-   // off_btn.initButton(&tft, 180, 200, 100, 40, WHITE, CYAN, BLACK, "OFF", 2);
-    on_btn.drawButton(false);
-   // off_btn.drawButton(false);
+    //Button intialization 
+    opt1.initButton(&tft,  240, 55, 480, 105, WHITE, CYAN, BLACK, "OPT 1", 2);
+    opt2.initButton(&tft,  240, 155, 480, 105, WHITE, CYAN, BLACK, "OPT 2", 2);
+    opt3.initButton(&tft,  240, 255, 480, 105, WHITE, CYAN, BLACK, "OPT 3", 2);
+    
+   //Draw Buttons
+    opt1.drawButton(false); //bolean inverted
+    opt2.drawButton(false);
+    opt3.drawButton(false);
 
-/*
-    //3 Option Boxes (x,y) (w,h)
-    tft.fillRect(0, 210, 480, 105, RED);  //button for OPT 3
-    tft.fillRect(0, 105, 480, 105, BLUE); //button for OPT 2
-    tft.fillRect(0, 0, 480, 105, GREEN);  //button for OPT 1
-   // tft.fillRect(0, 300, 20, 20, BLACK);  //button for OPT 1
-
-    //Print Text for buttons
-    tft.setCursor(190,40);
-    tft.setTextSize(4);
-    tft.setTextColor(BLACK);
-    tft.println("OPT1");
-
-    tft.setCursor(190,145);
-    tft.setTextSize(4);
-    tft.setTextColor(BLACK);
-    tft.println("OPT2");
-
-
-    tft.setCursor(190,245);
-    tft.setTextSize(4);
-    tft.setTextColor(BLACK);
-    tft.println("OPT3");
-  */   
+   //test rectangle
+    tft.fillRect(60, 180, 40, 40, RED);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+    bool down = Touch_getXY();
 
+    //check if buttons was pressed
+    opt1.press(down && opt1.contains(pixel_y, pixel_x));
+    opt2.press(down && opt2.contains(pixel_y, pixel_x));
+    opt3.press(down && opt3.contains(pixel_y, pixel_x));
+
+
+     //check if buttons were pressed or released
+     //button 1
+     if (opt1.justReleased())
+     {
+        opt1.drawButton();
+
+        //test
+        tft.fillRect(60, 180, 40, 40, RED);
+     }
+
+     
+     if (opt1.justPressed()) 
+     {
+        opt1.drawButton(true);
+
+        //test
+         tft.fillRect(60, 180, 40, 40, GREEN);
+     }
+
+    //button 2
+    if (opt2.justReleased())
+     {
+        opt2.drawButton();
+
+        //test
+        tft.fillRect(60, 180, 40, 40, RED);
+     }
+
+     
+     if (opt2.justPressed()) 
+     {
+        opt2.drawButton(true);
+
+        //test
+         tft.fillRect(60, 180, 40, 40, YELLOW);
+     }
+  
+    //button 3
+     if (opt3.justReleased())
+     {
+        opt3.drawButton();
+
+        //test
+        tft.fillRect(60, 180, 40, 40, RED);
+     }
+
+     
+     if (opt3.justPressed()) 
+     {
+        opt3.drawButton(true);
+
+        //test
+         tft.fillRect(60, 180, 40, 40, WHITE);
+     }
+    
+     
 }
