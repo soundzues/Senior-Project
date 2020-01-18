@@ -50,10 +50,10 @@ void setup(void)
     Serial.println("Calibrate for your Touch Panel");
     if (ID == 0xD3D3) ID = 0x9486; // write-only shield
     tft.begin(ID);
-    tft.setRotation(0);            //PORTRAIT
+    tft.setRotation(3);            //landscape
     tft.fillScreen(BLACK);
-    on_btn.initButton(&tft,  60, 200, 100, 40, WHITE, CYAN, BLACK, "ON", 2);
-    off_btn.initButton(&tft, 180, 200, 100, 40, WHITE, CYAN, BLACK, "OFF", 2);
+    on_btn.initButton(&tft,  0, 210, 480, 105, WHITE, CYAN, BLACK, "ON", 2);
+    off_btn.initButton(&tft, 0, 105, 105, 480, WHITE, CYAN, BLACK, "OFF", 2);
     on_btn.drawButton(false);
     off_btn.drawButton(false);
     tft.fillRect(40, 80, 160, 80, RED);
@@ -72,11 +72,11 @@ void loop(void)
         off_btn.drawButton();
     if (on_btn.justPressed()) {
         on_btn.drawButton(true);
-        tft.fillRect(40, 80, 160, 80, GREEN);
+      //  tft.fillRect(40, 80, 160, 80, GREEN);
     }
     if (off_btn.justPressed()) {
         off_btn.drawButton(true);
-        tft.fillRect(40, 80, 160, 80, RED);
+        //tft.fillRect(40, 80, 160, 80, RED);
     }
 }
 #endif
