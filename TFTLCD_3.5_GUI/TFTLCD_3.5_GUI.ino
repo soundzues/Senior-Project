@@ -2,6 +2,8 @@
 #include <MCUFRIEND_kbv.h>
 MCUFRIEND_kbv tft;
 #include <TouchScreen.h>
+#include <SPI.h>
+
 #define MINPRESSURE 200
 #define MAXPRESSURE 1000
 #define BLACK   0x0000
@@ -15,10 +17,10 @@ MCUFRIEND_kbv tft;
 
 const int XP = 6, XM = A2, YP = A1, YM = 7; //TFT LCD Controling pins
 const int TS_LEFT = 907, TS_RT = 136, TS_TOP = 942, TS_BOT = 139;
+//const int TS_LEFT = 1000, TS_RT = 100, TS_TOP = 1000, TS_BOT = 100;
+
 
 TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300); //touch screen init
-
-Adafruit_GFX_Button opt1, opt2, opt3; //buttons init
 
 int pixel_x, pixel_y;     //Touch_getXY() updates global vars
 
@@ -31,9 +33,20 @@ bool Touch_getXY(void)
     digitalWrite(YP, HIGH);   //because TFT control pins
     digitalWrite(XM, HIGH);
     bool pressed = (p.z > MINPRESSURE && p.z < MAXPRESSURE);
-    if (pressed) {
-        pixel_x = map(p.x, TS_LEFT, TS_RT, 0, tft.width()); //.kbv makes sense to me
-        pixel_y = map(p.y, TS_TOP, TS_BOT, 0, tft.height());
+    
+    if (pressed) 
+   {
+     pixel_x = map(p.x, TS_LEFT, TS_RT, 0, tft.width()); //.kbv makes sense to me
+
+     pixel_y = map(p.y, TS_TOP, TS_BOT, 0, tft.height());
+
+ //    Serial.print("x = ");  Serial.println(p.x);
+  //   Serial.print("y = ");  Serial.println(p.y);
+
+     Serial.print("xp = ");  Serial.println(pixel_x);
+     Serial.print("yp = ");  Serial.println(pixel_y);
+
+     
     }
     return pressed;
 }
@@ -48,83 +61,62 @@ void setup() {
     //Black Background
     tft.fillScreen(BLACK);
 
-    //Button intialization 
-    opt1.initButton(&tft,  240, 55, 480, 105, WHITE, CYAN, BLACK, "OPT 1", 2);
-    opt2.initButton(&tft,  240, 155, 480, 105, WHITE, CYAN, BLACK, "OPT 2", 2);
-    opt3.initButton(&tft,  240, 255, 480, 105, WHITE, CYAN, BLACK, "OPT 3", 2);
-    
-   //Draw Buttons
-    opt1.drawButton(false); //bolean inverted
-    opt2.drawButton(false);
-    opt3.drawButton(false);
+    //3 Option Boxes
+    tft.fillRect(0, 210, 480, 105, RED);  //button for OPT 3
+    tft.fillRect(0, 105, 480, 105, BLUE); //button for OPT 2
+    tft.fillRect(0, 0, 480, 105, GREEN);  //button for OPT 1
+
+    //Print Text for buttons
+    tft.setCursor(190,40);
+    tft.setTextSize(4);
+    tft.setTextColor(BLACK);
+    tft.println("OPT1");
+
+    tft.setCursor(190,145);
+    tft.setTextSize(4);
+    tft.setTextColor(BLACK);
+    tft.println("OPT2");
+
+
+    tft.setCursor(190,245);
+    tft.setTextSize(4);
+    tft.setTextColor(BLACK);
+    tft.println("OPT3");
 
    //test rectangle
-    tft.fillRect(60, 180, 40, 40, RED);
+   tft.fillRect(60, 100, 40, 40, RED);
 }
 
-void loop() {
-    bool down = Touch_getXY();
+void loop() 
+{
+    //Check if touched
+    bool down = Touch_getXY();      
+    delay(10);
 
-    //check if buttons was pressed
-    opt1.press(down && opt1.contains(pixel_y, pixel_x));
-    opt2.press(down && opt2.contains(pixel_y, pixel_x));
-    opt3.press(down && opt3.contains(pixel_y, pixel_x));
+    //if touched, detect which button pressed 
+    if(down)
+    {
+      //button 1
+      if((pixel_x >= 0 && pixel_y >= 0) && (pixel_x <= 130 && pixel_y <= 285))
+      {
+          tft.fillRect(60, 100, 40, 40, GREEN);
+      }
 
+      //button 2
+      if((pixel_x >= 150 && pixel_y >= 0) && (pixel_x <= 285 && pixel_y <= 285))
+      {
+          tft.fillRect(60, 100, 40, 40, WHITE);
+      }
 
-     //check if buttons were pressed or released
-     //button 1
-     if (opt1.justReleased())
-     {
-        opt1.drawButton();
-
-        //test
-        tft.fillRect(60, 180, 40, 40, RED);
-     }
-
-     
-     if (opt1.justPressed()) 
-     {
-        opt1.drawButton(true);
-
-        //test
-         tft.fillRect(60, 180, 40, 40, GREEN);
-     }
-
-    //button 2
-    if (opt2.justReleased())
-     {
-        opt2.drawButton();
-
-        //test
-        tft.fillRect(60, 180, 40, 40, RED);
-     }
-
-     
-     if (opt2.justPressed()) 
-     {
-        opt2.drawButton(true);
-
-        //test
-         tft.fillRect(60, 180, 40, 40, YELLOW);
-     }
-  
-    //button 3
-     if (opt3.justReleased())
-     {
-        opt3.drawButton();
-
-        //test
-        tft.fillRect(60, 180, 40, 40, RED);
-     }
-
-     
-     if (opt3.justPressed()) 
-     {
-        opt3.drawButton(true);
-
-        //test
-         tft.fillRect(60, 180, 40, 40, WHITE);
-     }
+      //button 3
+      if((pixel_x >= 300 && pixel_y >= 0) && (pixel_x <= 430 && pixel_y <= 285))
+      {
+          tft.fillRect(60, 100, 40, 40, WHITE);
+      }
+    }
+    else
+    {
+           tft.fillRect(60, 100, 40, 40, RED);
+    }
+}
     
-     
-}
