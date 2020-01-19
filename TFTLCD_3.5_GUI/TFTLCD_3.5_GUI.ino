@@ -62,9 +62,9 @@ void setup() {
     tft.fillScreen(BLACK);
 
     //3 Option Boxes
-    tft.fillRect(0, 210, 480, 105, RED);  //button for OPT 3
-    tft.fillRect(0, 105, 480, 105, BLUE); //button for OPT 2
-    tft.fillRect(0, 0, 480, 105, GREEN);  //button for OPT 1
+    tft.fillRect(0, 210, 480, 100, WHITE);  //button for OPT 3
+    tft.fillRect(0, 105, 480, 100, WHITE); //button for OPT 2
+    tft.fillRect(0, 0, 480, 100, WHITE);  //button for OPT 1
 
     //Print Text for buttons
     tft.setCursor(190,40);
@@ -84,14 +84,14 @@ void setup() {
     tft.println("OPT3");
 
    //test rectangle
-   tft.fillRect(60, 100, 40, 40, RED);
+   tft.fillRect(60, 120, 40, 40, RED);
 }
 
 void loop() 
 {
     //Check if touched
     bool down = Touch_getXY();      
-    delay(10);
+   // delay(10);
 
     //if touched, detect which button pressed 
     if(down)
@@ -99,24 +99,34 @@ void loop()
       //button 1
       if((pixel_x >= 0 && pixel_y >= 0) && (pixel_x <= 130 && pixel_y <= 285))
       {
-          tft.fillRect(60, 100, 40, 40, GREEN);
+       //   tft.fillRect(0, 0, 480, 100, GREEN); future feature to give button prese sense
+        
+          tft.fillRect(60, 120, 40, 40, CYAN);
       }
 
       //button 2
       if((pixel_x >= 150 && pixel_y >= 0) && (pixel_x <= 285 && pixel_y <= 285))
       {
-          tft.fillRect(60, 100, 40, 40, WHITE);
+      //    tft.fillRect(0, 105, 480, 100, GREEN); //button for OPT 2
+        
+          tft.fillRect(60, 120, 40, 40, BLUE);
       }
 
       //button 3
       if((pixel_x >= 300 && pixel_y >= 0) && (pixel_x <= 430 && pixel_y <= 285))
       {
-          tft.fillRect(60, 100, 40, 40, WHITE);
+       //   tft.fillRect(0, 210, 480, 100, GREEN);
+          
+          tft.fillRect(60, 120, 40, 40, YELLOW);
       }
     }
     else
     {
-           tft.fillRect(60, 100, 40, 40, RED);
+ /*      tft.fillRect(0, 210, 480, 100, WHITE);  //button for OPT 3
+       tft.fillRect(0, 105, 480, 100, WHITE); //button for OPT 2
+       tft.fillRect(0, 0, 480, 100, WHITE);  //button for OPT 1*/
+      
+           tft.fillRect(60, 120, 40, 40, RED);
     }
 }
     
