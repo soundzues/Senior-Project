@@ -23,16 +23,12 @@ const int TS_LEFT = 907, TS_RT = 136, TS_TOP = 942, TS_BOT = 139;
 TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300); //touch screen init
 
 int pixel_x, pixel_y;     //Touch_getXY() updates global vars
-
 char c;
-
 char opt_buff1[20] = {'O', 'P', 'T', '1'};
-
 int i = 0;
-
 int count;
-
 int uart_flag = 0;
+int change_flag = 1;
 
 //function to get touch from the screen
 bool Touch_getXY(void)
@@ -90,14 +86,13 @@ void loop()
   if (Serial.available() > 0)
   {
     c = Serial.read();
-    Serial.println(c);
+//    Serial.println(c);
 
     opt_buff1[i] = c;
 
     uart_flag = 1;
 
     i++;
-
     //  tft.fillRect(60, 120, 40, 40, BLACK);
   }
 
@@ -109,6 +104,7 @@ void loop()
 
   //Print Text for buttons
   tft.setCursor(190, 40);
+  
   //tft.println("OPT1");
   tft.print(opt_buff1);
 
@@ -116,22 +112,17 @@ void loop()
   {
     //Serial.println(opt_buff1);
     tft.fillRect(120, 25, 180, 50, WHITE);  //button for OPT 1
+    
     //   delay(1);
-    tft.setCursor(190, 40);
+    tft.setCursor(190, 40); 
     
     tft.println(opt_buff1);
+
+  //  tft.setCursor(190, 40); //test 
     
     uart_flag = 0;
     tft.fillRect(60, 120, 40, 40, BLACK);
   }
-  // tft.setCursor(190,40);
-  /*
-      for(int j = 0; j < i; j++)
-      {
-
-        tft.setCursor(190+j,40);
-        tft.println(opt_buff1[j]);
-      }*/
 
   tft.setCursor(190, 145);
   tft.println("OPT2");
@@ -147,6 +138,7 @@ void loop()
     if ((pixel_x >= 0 && pixel_y >= 0) && (pixel_x <= 130 && pixel_y <= 285))
     {
       //   tft.fillRect(0, 0, 480, 100, GREEN); //future feature to give button prese sense
+      Serial.println("OPT1");
 
       tft.fillRect(60, 120, 40, 40, CYAN);
     }
@@ -155,6 +147,7 @@ void loop()
     if ((pixel_x >= 150 && pixel_y >= 0) && (pixel_x <= 285 && pixel_y <= 285))
     {
       //    tft.fillRect(0, 105, 480, 100, GREEN); //button for OPT 2
+      Serial.println("OPT2");
 
       tft.fillRect(60, 120, 40, 40, BLUE);
     }
@@ -163,7 +156,8 @@ void loop()
     if ((pixel_x >= 300 && pixel_y >= 0) && (pixel_x <= 430 && pixel_y <= 285))
     {
       //   tft.fillRect(0, 210, 480, 100, GREEN);
-
+      Serial.println("OPT3");
+      
       tft.fillRect(60, 120, 40, 40, YELLOW);
     }
   }
