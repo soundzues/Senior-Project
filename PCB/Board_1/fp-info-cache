@@ -1,4 +1,4 @@
-16945479824988063
+16947061666727246
 Atmega 328
 QFP80P900X900X120-32N
 
@@ -74521,6 +74521,13 @@ transformer flyback
 0
 10
 10
+USB Receptale
+MOLEX_105450-0101
+
+
+0
+28
+28
 Valve
 Valve_ECC-83-1
 Valve ECC-83-1 round pins

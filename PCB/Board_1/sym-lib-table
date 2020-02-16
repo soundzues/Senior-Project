@@ -1074,4 +1074,5 @@
   (lib (name ZTX450-ND)(type Legacy)(uri "C:/Users/kotha/OneDrive/Desktop/Touch Screen/PCB/Libraries/digikey-kicad-library-master/src/Source_Symbols/ZTX450-ND.lib")(options "")(descr ""))
   (lib (name ATMEGA328P-AU)(type Legacy)(uri "C:/Users/kotha/OneDrive/Desktop/Touch Screen/PCB/Libraries/Atmega 328/ATMEGA328P-AU.lib")(options "")(descr ""))
   (lib (name Board_1-rescue)(type Legacy)(uri ${KIPRJMOD}/Board_1-rescue.lib)(options "")(descr ""))
+  (lib (name USB_TYPE_C)(type Legacy)(uri "C:/Users/kotha/OneDrive/Desktop/Touch Screen/PCB/Libraries/USB Receptale/105450-0101.lib")(options "")(descr ""))
 )
