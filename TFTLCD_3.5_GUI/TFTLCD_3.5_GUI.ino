@@ -2,7 +2,7 @@
 #include <MCUFRIEND_kbv.h>
 MCUFRIEND_kbv tft;
 #include <TouchScreen.h>
-#include <SPI.h>
+
 
 #define MINPRESSURE 200
 #define MAXPRESSURE 1000
@@ -73,7 +73,7 @@ void setup() {
   tft.fillRect(0, 0, 480, 100, WHITE);  //button for OPT 1
 
   //test rectangle
-  tft.fillRect(60, 120, 40, 40, RED);
+  //tft.fillRect(60, 120, 40, 40, RED);
 
   //set text size and color
   tft.setTextSize(4);
@@ -110,6 +110,8 @@ void loop()
 
   if (uart_flag == 1)
   {
+
+    //JACOB SUGGESTION: insted of creating a reactangle re write text in WHITE
     //Serial.println(opt_buff1);
     tft.fillRect(120, 25, 180, 50, WHITE);  //button for OPT 1
     
@@ -121,7 +123,8 @@ void loop()
   //  tft.setCursor(190, 40); //test 
     
     uart_flag = 0;
-    tft.fillRect(60, 120, 40, 40, BLACK);
+   
+    //tft.fillRect(60, 120, 40, 40, BLACK);
   }
 
   tft.setCursor(190, 145);
@@ -140,7 +143,7 @@ void loop()
       //   tft.fillRect(0, 0, 480, 100, GREEN); //future feature to give button prese sense
       Serial.println("OPT1");
 
-      tft.fillRect(60, 120, 40, 40, CYAN);
+     // tft.fillRect(60, 120, 40, 40, CYAN);
     }
 
     //button 2
@@ -149,7 +152,7 @@ void loop()
       //    tft.fillRect(0, 105, 480, 100, GREEN); //button for OPT 2
       Serial.println("OPT2");
 
-      tft.fillRect(60, 120, 40, 40, BLUE);
+      //tft.fillRect(60, 120, 40, 40, BLUE);
     }
 
     //button 3
@@ -158,16 +161,11 @@ void loop()
       //   tft.fillRect(0, 210, 480, 100, GREEN);
       Serial.println("OPT3");
       
-      tft.fillRect(60, 120, 40, 40, YELLOW);
+     // tft.fillRect(60, 120, 40, 40, YELLOW);
     }
   }
   else
   {
-   /*tft.fillRect(0, 0, 480, 100, WHITE);  //button for OPT 1
-          tft.fillRect(0, 210, 480, 100, WHITE);  //button for OPT 3
-          tft.fillRect(0, 105, 480, 100, WHITE); //button for OPT 2
-          tft.fillRect(0, 0, 480, 100, WHITE);  //button for OPT 1*/
-
-    tft.fillRect(60, 120, 40, 40, RED);
+    //tft.fillRect(60, 120, 40, 40, RED);
   }
 }

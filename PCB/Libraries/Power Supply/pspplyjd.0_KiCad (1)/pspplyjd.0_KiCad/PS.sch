@@ -1,0 +1,1011 @@
+EESchema Schematic File Version 2
+LIBS:PS-rescue
+LIBS:DesignCompLib
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:PS-cache
+EELAYER 25 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "pspplyjd.0"
+Date "2017-08-14"
+Rev "1"
+Comp "Tekbots"
+Comment1 "Output: 5V, 3.3V"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L C C4
+U 1 1 595DAD85
+P 5250 2700
+F 0 "C4" H 5275 2800 50  0000 L CNN
+F 1 "0.1uF" H 5275 2600 50  0000 L CNN
+F 2 "DesignFootprintLib:C_0603_HandSoldering" H 5288 2550 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=311-1343-1-ND" H 5250 2700 50  0001 C CNN
+F 4 "CC0603ZRY5V9BB104" H 5250 2700 60  0001 C CNN "MPN"
+F 5 "311-1343-1-ND" H 5250 2700 60  0001 C CNN "DigiKey"
+	1    5250 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L L L1
+U 1 1 595DAD9A
+P 6950 2450
+F 0 "L1" V 6900 2450 50  0000 C CNN
+F 1 "3.3uH" V 7025 2450 50  0000 C CNN
+F 2 "DesignFootprintLib:L_Sumida_4.9x4.9mm_diag" H 6950 2450 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/sumida-america-components-inc/CDRH4D28CLDNP-3R3PC/308-2037-1-ND/3946734" H 6950 2450 50  0001 C CNN
+F 4 "CDRH4D28CLDNP-3R3PC" V 6950 2450 60  0001 C CNN "MPN"
+F 5 "308-2037-1-ND" V 6950 2450 60  0001 C CNN "DigiKey"
+	1    6950 2450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L C C5
+U 1 1 595DADA1
+P 6650 3400
+F 0 "C5" H 6675 3500 50  0000 L CNN
+F 1 "680pF" H 6675 3300 50  0000 L CNN
+F 2 "DesignFootprintLib:C_0603_HandSoldering" H 6688 3250 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=311-1425-1-ND" H 6650 3400 50  0001 C CNN
+F 4 "CC0603JRNPO9BN681" H 6650 3400 60  0001 C CNN "MPN"
+F 5 "311-1425-1-ND" H 6650 3400 60  0001 C CNN "DigiKey"
+	1    6650 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C6
+U 1 1 595DADA8
+P 6950 3600
+F 0 "C6" H 6975 3700 50  0000 L CNN
+F 1 "47pF" H 6975 3500 50  0000 L CNN
+F 2 "DesignFootprintLib:C_0603_HandSoldering" H 6988 3450 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=311-1065-1-ND" H 6950 3600 50  0001 C CNN
+F 4 "CC0603JRNPO9BN470" H 6950 3600 60  0001 C CNN "MPN"
+F 5 "311-1065-1-ND" H 6950 3600 60  0001 C CNN "DigiKey"
+	1    6950 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 595DADE0
+P 5250 3700
+F 0 "C3" H 5275 3800 50  0000 L CNN
+F 1 "0.015uF" H 5275 3600 50  0000 L CNN
+F 2 "DesignFootprintLib:C_0603_HandSoldering" H 5288 3550 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=311-1430-1-ND" H 5250 3700 50  0001 C CNN
+F 4 "CC0603KRX7R9BB153" H 5250 3700 60  0001 C CNN "MPN"
+F 5 "311-1430-1-ND" H 5250 3700 60  0001 C CNN "DigiKey"
+	1    5250 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR01
+U 1 1 595DADE7
+P 7300 3650
+F 0 "#PWR01" H 7300 3400 50  0001 C CNN
+F 1 "GNDREF" H 7300 3500 50  0001 C CNN
+F 2 "" H 7300 3650 50  0001 C CNN
+F 3 "" H 7300 3650 50  0001 C CNN
+	1    7300 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR02
+U 1 1 595DADF3
+P 7750 3650
+F 0 "#PWR02" H 7750 3400 50  0001 C CNN
+F 1 "GNDREF" H 7750 3500 50  0001 C CNN
+F 2 "" H 7750 3650 50  0001 C CNN
+F 3 "" H 7750 3650 50  0001 C CNN
+	1    7750 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR03
+U 1 1 595DADF9
+P 5100 4550
+F 0 "#PWR03" H 5100 4300 50  0001 C CNN
+F 1 "GNDREF" H 5100 4400 50  0001 C CNN
+F 2 "" H 5100 4550 50  0001 C CNN
+F 3 "" H 5100 4550 50  0001 C CNN
+	1    5100 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR04
+U 1 1 595DADFF
+P 4400 4550
+F 0 "#PWR04" H 4400 4300 50  0001 C CNN
+F 1 "GNDREF" H 4400 4400 50  0001 C CNN
+F 2 "" H 4400 4550 50  0001 C CNN
+F 3 "" H 4400 4550 50  0001 C CNN
+	1    4400 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L TPS54232 U2
+U 1 1 595DAE0B
+P 5800 3100
+F 0 "U2" H 5800 2800 60  0000 C CNN
+F 1 "TPS54232" H 5800 3400 60  0000 C CNN
+F 2 "DesignFootprintLib:SOIC-8-N" H 5800 3400 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/texas-instruments/TPS54232DR/296-39414-1-ND/5143365" H 5800 3400 60  0001 C CNN
+F 4 "TPS54232DR" H 5800 3100 60  0001 C CNN "MPN"
+F 5 "296-39414-1-ND" H 5800 3100 60  0001 C CNN "DigiKey"
+	1    5800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J2
+U 1 1 595DB223
+P 1850 3100
+F 0 "J2" H 1850 3250 50  0000 C CNN
+F 1 "CONN_01X02" V 1950 3100 50  0000 C CNN
+F 2 "DesignFootprintLib:Pin_Header_Straight_1x02_Pitch2.54mm" H 1850 3100 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/harwin-inc/M20-9990246/952-2262-ND/3728226" H 1850 3100 50  0001 C CNN
+F 4 "M20-9990246" H 1850 3100 60  0001 C CNN "MPN"
+F 5 "952-2262-ND" H 1850 3100 60  0001 C CNN "DigiKey"
+	1    1850 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L BARREL_JACK J1
+U 1 1 595DB4DA
+P 2050 2500
+F 0 "J1" H 2050 2695 50  0000 C CNN
+F 1 "BARREL_JACK" H 2050 2345 50  0000 C CNN
+F 2 "DesignFootprintLib:BARREL_JACK" H 2050 2500 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=CP-002A-ND" H 2050 2500 50  0001 C CNN
+F 4 "PJ-002A" H 2050 2500 60  0001 C CNN "MPN"
+F 5 "CP-002A-ND" H 2050 2500 60  0001 C CNN "DigiKey"
+	1    2050 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L LD1117S33TR U1
+U 1 1 595DCE77
+P 4400 5550
+F 0 "U1" H 4400 5800 50  0000 C CNN
+F 1 "LD1117S33TR" H 4400 5750 50  0000 C CNN
+F 2 "DesignFootprintLib:SOT-223" H 4400 5650 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/stmicroelectronics/LD1117S33TR/497-1242-1-ND/586242" H 4400 5550 50  0001 C CNN
+F 4 "LD1117S33TR" H 4400 5550 60  0001 C CNN "MPN"
+F 5 "497-1242-1-ND" H 4400 5550 60  0001 C CNN "DigiKey"
+	1    4400 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDREF #PWR05
+U 1 1 595DD4A0
+P 4400 6450
+F 0 "#PWR05" H 4400 6200 50  0001 C CNN
+F 1 "GNDREF" H 4400 6300 50  0001 C CNN
+F 2 "" H 4400 6450 50  0001 C CNN
+F 3 "" H 4400 6450 50  0001 C CNN
+	1    4400 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C7
+U 1 1 595DDE53
+P 3900 5750
+F 0 "C7" H 3925 5850 50  0000 L CNN
+F 1 "0.1uF" H 3925 5650 50  0000 L CNN
+F 2 "DesignFootprintLib:C_0603_HandSoldering" H 3938 5600 50  0001 C CNN
+F 3 "https://www.digikey.com/products/en?keywords=311-1343-1-ND" H 3900 5750 50  0001 C CNN
+F 4 "CC0603ZRY5V9BB104" H 3900 5750 60  0001 C CNN "MPN"
+F 5 "311-1343-1-ND" H 3900 5750 60  0001 C CNN "DigiKey"
+	1    3900 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J8
+U 1 1 595DE35E
+P 9350 3800
+F 0 "J8" H 9350 3950 50  0000 C CNN
+F 1 "CONN_01X02" V 9450 3800 50  0000 C CNN
+F 2 "DesignFootprintLib:Pin_Header_Straight_1x02_Pitch2.54mm" H 9350 3800 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/harwin-inc/M20-9990246/952-2262-ND/3728226" H 9350 3800 50  0001 C CNN
+F 4 "M20-9990246" H 9350 3800 60  0001 C CNN "MPN"
+F 5 "952-2262-ND" H 9350 3800 60  0001 C CNN "DigiKey"
+	1    9350 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J6
+U 1 1 595DE6CA
+P 9350 3250
+F 0 "J6" H 9350 3400 50  0000 C CNN
+F 1 "CONN_01X02" V 9450 3250 50  0000 C CNN
+F 2 "DesignFootprintLib:Pin_Header_Straight_1x02_Pitch2.54mm" H 9350 3250 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/harwin-inc/M20-9990246/952-2262-ND/3728226" H 9350 3250 50  0001 C CNN
+F 4 "M20-9990246" H 9350 3250 60  0001 C CNN "MPN"
+F 5 "952-2262-ND" H 9350 3250 60  0001 C CNN "DigiKey"
+	1    9350 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J7
+U 1 1 595DF537
+P 9350 4350
+F 0 "J7" H 9350 4550 50  0000 C CNN
+F 1 "CONN_01X03" V 9450 4350 50  0000 C CNN
+F 2 "DesignFootprintLib:JST_PH_B3B-PH-K_03x2.00mm_Straight" H 9350 4350 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/jst-sales-america-inc/B3B-EH-A(LF)(SN)/455-1612-ND/926521" H 9350 4350 50  0001 C CNN
+F 4 "B3B-EH-A(LF)(SN)" H 9350 4350 60  0001 C CNN "MPN"
+F 5 "455-1612-ND" H 9350 4350 60  0001 C CNN "DigiKey"
+	1    9350 4350
+	1    0    0    -1  
+$EndComp
+Text Notes 1650 2550 2    60   ~ 0
+DC Jack
+Text Notes 1650 3150 2    60   ~ 0
+Power Header
+Text Notes 2100 4650 2    60   ~ 0
+Jumper
+Text Notes 2050 6150 2    60   ~ 0
+Power Header
+Text Notes 2050 5500 2    60   ~ 0
+Jumper
+Text Notes 9550 3300 0    60   ~ 0
+5V Out
+Text Notes 9950 3850 2    60   ~ 0
+3.3V Out
+Text Notes 9550 4350 0    60   ~ 0
+JST Power Conn
+Text Label 9150 3200 2    60   ~ 0
+V_5
+Text Label 9150 4250 2    60   ~ 0
+V_5
+Text Label 9150 3300 2    60   ~ 0
+GND
+Text Label 9150 4450 2    60   ~ 0
+GND
+Text Label 9150 3850 2    60   ~ 0
+GND
+Text Label 9150 4350 2    60   ~ 0
+V_3.3
+Text Label 9150 3750 2    60   ~ 0
+V_3.3
+$Comp
+L GNDREF #PWR06
+U 1 1 595F568F
+P 9350 5200
+F 0 "#PWR06" H 9350 4950 50  0001 C CNN
+F 1 "GNDREF" H 9350 5050 50  0001 C CNN
+F 2 "" H 9350 5200 50  0001 C CNN
+F 3 "" H 9350 5200 50  0001 C CNN
+	1    9350 5200
+	1    0    0    -1  
+$EndComp
+Text Label 9150 5000 2    60   ~ 0
+GND
+$Comp
+L C C2
+U 1 1 595F720D
+P 7300 2750
+F 0 "C2" H 7325 2850 50  0000 L CNN
+F 1 "10uF" H 7325 2650 50  0000 L CNN
+F 2 "DesignFootprintLib:C_1206_HandSoldering" H 7338 2600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-FK1A220R/PCE3774CT-ND/766150" H 7300 2750 50  0001 C CNN
+F 4 "EEE-FK1A220R" H 7300 2750 60  0001 C CNN "MPN"
+F 5 "PCE3774CT-ND" H 7300 2750 60  0001 C CNN "DigiKey"
+	1    7300 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Schottky D2
+U 1 1 595F72D5
+P 6650 2750
+F 0 "D2" H 6650 2850 50  0000 C CNN
+F 1 "B220A" H 6650 2650 50  0000 C CNN
+F 2 "DesignFootprintLib:D_SMA" H 6650 2750 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/diodes-incorporated/B220A-13-F/B220A-FDICT-ND/751528" H 6650 2750 50  0001 C CNN
+F 4 "B220A-13-F" H 6650 2750 60  0001 C CNN "MPN"
+F 5 "B220A-FDICT-ND" H 6650 2750 60  0001 C CNN "DigiKey"
+	1    6650 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDREF #PWR07
+U 1 1 595FAA4C
+P 6800 4450
+F 0 "#PWR07" H 6800 4200 50  0001 C CNN
+F 1 "GNDREF" H 6800 4300 50  0001 C CNN
+F 2 "" H 6800 4450 50  0001 C CNN
+F 3 "" H 6800 4450 50  0001 C CNN
+	1    6800 4450
+	1    0    0    -1  
+$EndComp
+Text Label 2350 2600 0    60   ~ 0
+GND
+Text Label 2050 3150 0    60   ~ 0
+GND
+Text Label 2500 4650 0    60   ~ 0
+GND
+Text Label 2500 5400 0    60   ~ 0
+V_5
+Text Label 2500 6200 0    60   ~ 0
+GND
+Text Label 8750 2450 0    60   ~ 0
+V_5
+Text Label 6300 5500 0    60   ~ 0
+V_3.3
+$Comp
+L CONN_01X03 J4
+U 1 1 595DD10A
+P 2300 5500
+F 0 "J4" H 2300 5700 50  0000 C CNN
+F 1 "CONN_01X03" V 2400 5500 50  0000 C CNN
+F 2 "DesignFootprintLib:Pin_Header_Straight_1x03_Pitch2.54mm" H 2300 5500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/wurth-electronics-inc/61300311121/732-5316-ND/4846825" H 2300 5500 50  0001 C CNN
+F 4 "61300311121" H 2300 5500 60  0001 C CNN "MPN"
+F 5 "732-5316-ND" H 2300 5500 60  0001 C CNN "DigiKey"
+	1    2300 5500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L SPDT_MHSS1104 S1
+U 1 1 59602002
+P 2750 4200
+F 0 "S1" H 2750 4100 60  0000 C CNN
+F 1 "SPDT" H 2750 4550 60  0000 C CNN
+F 2 "DesignFootprintLib:SPDT_MHSS1104" H 2800 4200 60  0001 C CNN
+F 3 "https://www.digikey.com/products/en?mpart=MHSS1104&v=679" H 2800 4200 60  0001 C CNN
+F 4 "MHSS1104" H 2750 4200 60  0001 C CNN "MPN"
+F 5 "679-1848-ND" H 2750 4200 60  0001 C CNN "DigiKey"
+	1    2750 4200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2350 4100
+NoConn ~ 2350 2500
+$Comp
+L GNDREF #PWR08
+U 1 1 59604DF9
+P 3900 3600
+F 0 "#PWR08" H 3900 3350 50  0001 C CNN
+F 1 "GNDREF" H 3900 3450 50  0001 C CNN
+F 2 "" H 3900 3600 50  0001 C CNN
+F 3 "" H 3900 3600 50  0001 C CNN
+	1    3900 3600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3100 4000
+NoConn ~ 3100 4200
+NoConn ~ 3100 4100
+Text Label 2350 4000 2    60   ~ 0
+GND
+Text Notes 2100 4100 2    60   ~ 0
+EN Switch
+$Comp
+L Res R1
+U 1 1 59608929
+P 4400 3400
+F 0 "R1" H 4400 3300 60  0000 C CNN
+F 1 "150k" H 4400 3500 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 4400 3400 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3GEYJ154V/P150KGCT-ND/134977" V 4400 3400 60  0001 C CNN
+F 4 "ERJ-3GEYJ154V" H 4400 3400 60  0001 C CNN "MPN"
+F 5 "P150KGCT-ND" H 4400 3400 60  0001 C CNN "DigiKey"
+	1    4400 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Res R2
+U 1 1 5960A7DC
+P 4400 4200
+F 0 "R2" H 4400 4100 60  0000 C CNN
+F 1 "48.7k" H 4400 4300 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 4400 4200 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3EKF4872V/P48.7KHCT-ND/198409" V 4400 4200 60  0001 C CNN
+F 4 "ERJ-3EKF4872V" H 4400 4200 60  0001 C CNN "MPN"
+F 5 "P48.7KHCT-ND" H 4400 4200 60  0001 C CNN "DigiKey"
+	1    4400 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Res R3
+U 1 1 5960AA79
+P 4950 3700
+F 0 "R3" H 4950 3600 60  0000 C CNN
+F 1 "Rss" H 4950 3800 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 4950 3700 60  0001 C CNN
+F 3 "" V 4950 3700 60  0001 C CNN
+	1    4950 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Res R4
+U 1 1 5960ABEE
+P 6650 3800
+F 0 "R4" H 6650 3700 60  0000 C CNN
+F 1 "17.4k" H 6650 3900 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 6650 3800 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3EKF1742V/P17.4KHCT-ND/198196" V 6650 3800 60  0001 C CNN
+F 4 "ERJ-3EKF1742V" H 6650 3800 60  0001 C CNN "MPN"
+F 5 "P17.4KHCT-ND" H 6650 3800 60  0001 C CNN "DigiKey"
+	1    6650 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Res R5
+U 1 1 5960BDD2
+P 7750 2750
+F 0 "R5" H 7750 2650 60  0000 C CNN
+F 1 "10k" H 7750 2850 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 7750 2750 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/yageo/RC0603JR-0710KL/311-10KGRCT-ND/729647" V 7750 2750 60  0001 C CNN
+F 4 "RC0603JR-0710KL" H 7750 2750 60  0001 C CNN "MPN"
+F 5 "311-10KGRCT-ND" H 7750 2750 60  0001 C CNN "DigiKey"
+	1    7750 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Res R6
+U 1 1 5960BE8B
+P 7750 3300
+F 0 "R6" H 7750 3200 60  0000 C CNN
+F 1 "1.87k" H 7750 3400 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 7750 3300 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3EKF1871V/P1.87KHCT-ND/198097" V 7750 3300 60  0001 C CNN
+F 4 "ERJ-3EKF1871V" H 7750 3300 60  0001 C CNN "MPN"
+F 5 "P1.87KHCT-ND" H 7750 3300 60  0001 C CNN "DigiKey"
+	1    7750 3300
+	0    -1   -1   0   
+$EndComp
+Text Notes 9550 5150 0    60   ~ 0
+Ground
+$Comp
+L CP1 C8
+U 1 1 595FDE2D
+P 4900 5750
+F 0 "C8" H 4925 5850 50  0000 L CNN
+F 1 "10uF" H 4925 5650 50  0000 L CNN
+F 2 "DesignFootprintLib:CP_Elec_D4.0mm" H 4938 5600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA100WR/PCE3948CT-ND/766324" H 4900 5750 50  0001 C CNN
+F 4 "EEE-1VA100WR" H 4900 5750 60  0001 C CNN "MPN"
+F 5 "PCE3948CT-ND" H 4900 5750 60  0001 C CNN "DigiKey"
+	1    4900 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 595FDFA8
+P 3900 3300
+F 0 "C1" H 3925 3400 50  0000 L CNN
+F 1 "10uF" H 3925 3200 50  0000 L CNN
+F 2 "DesignFootprintLib:C_1206_HandSoldering" H 3938 3150 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/EEE-1VA100WR/PCE3948CT-ND/766324" H 3900 3300 50  0001 C CNN
+F 4 "EEE-1VA100WR" H 3900 3300 60  0001 C CNN "MPN"
+F 5 "PCE3948CT-ND" H 3900 3300 60  0001 C CNN "DigiKey"
+	1    3900 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Schottky D3
+U 1 1 595FEB40
+P 3500 5500
+F 0 "D3" H 3500 5600 50  0000 C CNN
+F 1 "1N5819" H 3500 5400 50  0000 C CNN
+F 2 "DesignFootprintLib:D_SOD-123" H 3500 5500 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/diodes-incorporated/1N5819HW-7-F/1N5819HW-FDICT-ND/815283" H 3500 5500 50  0001 C CNN
+F 4 "1N5819HW-7-F" H 3500 5500 60  0001 C CNN "MPN"
+F 5 "1N5819HW-FDICT-ND" H 3500 5500 60  0001 C CNN "DigiKey"
+	1    3500 5500
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 J3
+U 1 1 595FED6A
+P 2300 4600
+F 0 "J3" H 2300 4750 50  0000 C CNN
+F 1 "CONN_01X02" V 2400 4600 50  0000 C CNN
+F 2 "DesignFootprintLib:Pin_Header_Straight_1x02_Pitch2.54mm" H 2300 4600 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/harwin-inc/M20-9990246/952-2262-ND/3728226" H 2300 4600 50  0001 C CNN
+F 4 "M20-9990246" H 2300 4600 60  0001 C CNN "MPN"
+F 5 "952-2262-ND" H 2300 4600 60  0001 C CNN "DigiKey"
+	1    2300 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 J5
+U 1 1 595FEE5D
+P 2300 6150
+F 0 "J5" H 2300 6300 50  0000 C CNN
+F 1 "CONN_01X02" V 2400 6150 50  0000 C CNN
+F 2 "DesignFootprintLib:Pin_Header_Straight_1x02_Pitch2.54mm" H 2300 6150 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/harwin-inc/M20-9990246/952-2262-ND/3728226" H 2300 6150 50  0001 C CNN
+F 4 "M20-9990246" H 2300 6150 60  0001 C CNN "MPN"
+F 5 "952-2262-ND" H 2300 6150 60  0001 C CNN "DigiKey"
+	1    2300 6150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LED D4
+U 1 1 59604245
+P 8600 3300
+F 0 "D4" H 8600 3400 50  0000 C CNN
+F 1 "LED" H 8600 3200 50  0000 C CNN
+F 2 "DesignFootprintLib:LED_0603_HandSoldering" H 8600 3300 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12V1WT86/SML-D12V1WT86CT-ND/5843857" H 8600 3300 50  0001 C CNN
+F 4 "SML-D12V1WT86" H 8600 3300 60  0001 C CNN "MPN"
+F 5 "SML-D12V1WT86CT-ND" H 8600 3300 60  0001 C CNN "DigiKey"
+	1    8600 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Res R7
+U 1 1 59604397
+P 8600 2750
+F 0 "R7" H 8600 2650 60  0000 C CNN
+F 1 "1.37k" H 8600 2850 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 8600 2750 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3EKF1371V/P1.37KHCT-ND/198084" V 8600 2750 60  0001 C CNN
+F 4 "ERJ-3EKF1371V" H 8600 2750 60  0001 C CNN "MPN"
+F 5 "P1.37KHCT-ND" H 8600 2750 60  0001 C CNN "DigiKey"
+	1    8600 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDREF #PWR09
+U 1 1 59604698
+P 8600 3650
+F 0 "#PWR09" H 8600 3400 50  0001 C CNN
+F 1 "GNDREF" H 8600 3500 50  0001 C CNN
+F 2 "" H 8600 3650 50  0001 C CNN
+F 3 "" H 8600 3650 50  0001 C CNN
+	1    8600 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Res R8
+U 1 1 59605027
+P 6100 5700
+F 0 "R8" H 6100 5600 60  0000 C CNN
+F 1 "560" H 6100 5800 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 6100 5700 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3GEYJ561V/P560GCT-ND/134814" V 6100 5700 60  0001 C CNN
+F 4 "ERJ-3GEYJ561V" H 6100 5700 60  0001 C CNN "MPN"
+F 5 "P560GCT-ND" H 6100 5700 60  0001 C CNN "DigiKey"
+	1    6100 5700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D5
+U 1 1 59605323
+P 6100 6050
+F 0 "D5" H 6100 6150 50  0000 C CNN
+F 1 "LED" H 6100 5950 50  0000 C CNN
+F 2 "DesignFootprintLib:LED_0603_HandSoldering" H 6100 6050 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/rohm-semiconductor/SML-D12V1WT86/SML-D12V1WT86CT-ND/5843857" H 6100 6050 50  0001 C CNN
+F 4 "SML-D12V1WT86" H 6100 6050 60  0001 C CNN "MPN"
+F 5 "SML-D12V1WT86CT-ND" H 6100 6050 60  0001 C CNN "DigiKey"
+	1    6100 6050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDREF #PWR010
+U 1 1 5960572E
+P 6100 6400
+F 0 "#PWR010" H 6100 6150 50  0001 C CNN
+F 1 "GNDREF" H 6100 6250 50  0001 C CNN
+F 2 "" H 6100 6400 50  0001 C CNN
+F 3 "" H 6100 6400 50  0001 C CNN
+	1    6100 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2850 5250 2950
+Wire Wire Line
+	5250 2950 5350 2950
+Wire Wire Line
+	5250 2550 5250 2450
+Wire Wire Line
+	5250 2450 6800 2450
+Wire Wire Line
+	6350 2300 6350 2950
+Wire Wire Line
+	6650 2900 6650 3050
+Wire Wire Line
+	6250 3050 7300 3050
+Wire Wire Line
+	6650 2450 6650 2600
+Connection ~ 6350 2450
+Connection ~ 6650 2450
+Wire Wire Line
+	7100 2450 8050 2450
+Wire Wire Line
+	8350 2450 8750 2450
+Wire Wire Line
+	7300 2450 7300 2600
+Wire Wire Line
+	7300 2900 7300 3650
+Connection ~ 6650 3050
+Wire Wire Line
+	6250 3150 6950 3150
+Wire Wire Line
+	6650 3150 6650 3250
+Wire Wire Line
+	6650 3550 6650 3650
+Wire Wire Line
+	6950 4050 6950 3750
+Wire Wire Line
+	6650 4050 6950 4050
+Wire Wire Line
+	6800 4050 6800 4450
+Wire Wire Line
+	6950 3150 6950 3450
+Connection ~ 6650 3150
+Wire Wire Line
+	7750 2450 7750 2600
+Connection ~ 7300 2450
+Wire Wire Line
+	7750 2900 7750 3150
+Wire Wire Line
+	7750 3050 8050 3050
+Wire Wire Line
+	8050 4800 6350 4800
+Wire Wire Line
+	6350 4800 6350 3250
+Connection ~ 7750 3050
+Wire Wire Line
+	3750 3050 5350 3050
+Wire Wire Line
+	4400 3250 4400 3050
+Connection ~ 4400 3050
+Wire Wire Line
+	4400 3550 4400 4050
+Wire Wire Line
+	5350 3150 4750 3150
+Wire Wire Line
+	4750 3150 4750 3700
+Wire Wire Line
+	4750 3700 4400 3700
+Connection ~ 4400 3700
+Connection ~ 7300 3050
+Wire Wire Line
+	7750 3650 7750 3450
+Wire Wire Line
+	4400 4550 4400 4350
+Wire Wire Line
+	3900 3150 3900 3050
+Connection ~ 3900 3050
+Connection ~ 7750 2450
+Wire Wire Line
+	5250 3550 5250 3250
+Wire Wire Line
+	4950 3250 5350 3250
+Wire Wire Line
+	4950 3550 4950 3250
+Connection ~ 5250 3250
+Wire Wire Line
+	4950 3850 4950 4150
+Wire Wire Line
+	4950 4150 5250 4150
+Wire Wire Line
+	5100 4150 5100 4550
+Connection ~ 5100 4150
+Connection ~ 6800 4050
+Wire Wire Line
+	6350 2950 6250 2950
+Wire Wire Line
+	6350 3250 6250 3250
+Wire Wire Line
+	2350 2400 2800 2400
+Wire Wire Line
+	2800 2400 2800 3050
+Wire Wire Line
+	2050 3050 2900 3050
+Connection ~ 2800 3050
+Connection ~ 4400 3900
+Wire Wire Line
+	4400 5800 4400 6450
+Wire Wire Line
+	3650 5500 4000 5500
+Wire Wire Line
+	3900 5500 3900 5600
+Connection ~ 3900 5500
+Wire Wire Line
+	3900 5900 3900 6050
+Wire Wire Line
+	3900 6050 4900 6050
+Connection ~ 4400 6050
+Wire Wire Line
+	4900 5500 4900 5600
+Wire Wire Line
+	4900 6050 4900 5900
+Wire Wire Line
+	2700 6100 2500 6100
+Wire Wire Line
+	2700 5600 2700 6100
+Wire Wire Line
+	2700 5600 2500 5600
+Wire Wire Line
+	5250 4150 5250 3850
+Wire Wire Line
+	6650 3950 6650 4050
+Wire Wire Line
+	2500 4550 3250 4550
+Wire Wire Line
+	9150 5000 9350 5000
+Wire Wire Line
+	9350 5000 9350 5200
+Wire Wire Line
+	3900 3450 3900 3600
+Wire Wire Line
+	3100 3900 4400 3900
+Wire Wire Line
+	3250 4550 3250 3900
+Connection ~ 3250 3900
+Wire Wire Line
+	8600 2450 8600 2600
+Wire Wire Line
+	8600 3150 8600 2900
+Wire Wire Line
+	8600 3650 8600 3450
+Wire Wire Line
+	6100 5850 6100 5900
+Wire Wire Line
+	6100 6400 6100 6200
+$Comp
+L TEST T4
+U 1 1 5964D1A9
+P 8450 2300
+F 0 "T4" H 8450 2600 50  0000 C BNN
+F 1 "TEST" H 8450 2550 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 8450 2300 50  0001 C CNN
+F 3 "" H 8450 2300 50  0001 C CNN
+	1    8450 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST T1
+U 1 1 5964D784
+P 2800 2400
+F 0 "T1" H 2800 2700 50  0000 C BNN
+F 1 "TEST" H 2800 2650 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 2800 2400 50  0001 C CNN
+F 3 "" H 2800 2400 50  0001 C CNN
+	1    2800 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST T5
+U 1 1 5964DBAF
+P 2800 5250
+F 0 "T5" H 2800 5550 50  0000 C BNN
+F 1 "TEST" H 2800 5500 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 2800 5250 50  0001 C CNN
+F 3 "" H 2800 5250 50  0001 C CNN
+	1    2800 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST T8
+U 1 1 5964DCCC
+P 5750 5250
+F 0 "T8" H 5750 5550 50  0000 C BNN
+F 1 "TEST" H 5750 5500 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 5750 5250 50  0001 C CNN
+F 3 "" H 5750 5250 50  0001 C CNN
+	1    5750 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST T11
+U 1 1 5964DD93
+P 9350 5000
+F 0 "T11" H 9350 5300 50  0000 C BNN
+F 1 "TEST" H 9350 5250 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 9350 5000 50  0001 C CNN
+F 3 "" H 9350 5000 50  0001 C CNN
+	1    9350 5000
+	1    0    0    -1  
+$EndComp
+Connection ~ 2800 2400
+Connection ~ 9350 5000
+$Comp
+L Res R9
+U 1 1 59650989
+P 3050 3050
+F 0 "R9" H 3050 2950 60  0000 C CNN
+F 1 "0.05" H 3050 3150 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 3050 3050 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3BWFR050V/P17472CT-ND/5647956" V 3050 3050 60  0001 C CNN
+F 4 "ERJ-3BWFR050V" H 3050 3050 60  0001 C CNN "MPN"
+F 5 "P17472CT-ND" H 3050 3050 60  0001 C CNN "DigiKey"
+	1    3050 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3050 3450 3050
+$Comp
+L TEST T2
+U 1 1 59651259
+P 3300 2400
+F 0 "T2" H 3300 2700 50  0000 C BNN
+F 1 "TEST" H 3300 2650 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 3300 2400 50  0001 C CNN
+F 3 "" H 3300 2400 50  0001 C CNN
+	1    3300 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2400 3300 3050
+Connection ~ 3300 3050
+$Comp
+L Res R11
+U 1 1 59651680
+P 3050 5500
+F 0 "R11" H 3050 5400 60  0000 C CNN
+F 1 "0.01" H 3050 5600 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 3050 5500 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics-america-inc/RUK1608JR010CS/1276-6163-1-ND/3969135" V 3050 5500 60  0001 C CNN
+F 4 "RUK1608JR010CS" H 3050 5500 60  0001 C CNN "MPN"
+F 5 "1276-6163-1-ND" H 3050 5500 60  0001 C CNN "DigiKey"
+	1    3050 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5500 2900 5500
+Wire Wire Line
+	2800 5250 2800 5500
+Connection ~ 2800 5500
+Wire Wire Line
+	3200 5500 3350 5500
+$Comp
+L TEST T6
+U 1 1 59651962
+P 3300 5250
+F 0 "T6" H 3300 5550 50  0000 C BNN
+F 1 "TEST" H 3300 5500 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 3300 5250 50  0001 C CNN
+F 3 "" H 3300 5250 50  0001 C CNN
+	1    3300 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 5250 3300 5500
+Connection ~ 3300 5500
+Connection ~ 8600 2450
+Wire Wire Line
+	8450 2300 8450 2450
+$Comp
+L TEST T3
+U 1 1 59653314
+P 7950 2300
+F 0 "T3" H 7950 2600 50  0000 C BNN
+F 1 "TEST" H 7950 2550 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 7950 2300 50  0001 C CNN
+F 3 "" H 7950 2300 50  0001 C CNN
+	1    7950 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 2450 7950 2300
+$Comp
+L Res R10
+U 1 1 596535FC
+P 8200 2450
+F 0 "R10" H 8200 2350 60  0000 C CNN
+F 1 "0.05" H 8200 2550 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 8200 2450 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-3BWFR050V/P17472CT-ND/5647956" V 8200 2450 60  0001 C CNN
+F 4 "ERJ-3BWFR050V" H 8200 2450 60  0001 C CNN "MPN"
+F 5 "P17472CT-ND" H 8200 2450 60  0001 C CNN "DigiKey"
+	1    8200 2450
+	1    0    0    -1  
+$EndComp
+Connection ~ 8450 2450
+Connection ~ 7950 2450
+Wire Wire Line
+	6100 5500 6100 5550
+$Comp
+L TEST T7
+U 1 1 59653F97
+P 5250 5250
+F 0 "T7" H 5250 5550 50  0000 C BNN
+F 1 "TEST" H 5250 5500 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 5250 5250 50  0001 C CNN
+F 3 "" H 5250 5250 50  0001 C CNN
+	1    5250 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Res R12
+U 1 1 59654133
+P 5500 5500
+F 0 "R12" H 5500 5400 60  0000 C CNN
+F 1 "0.01" H 5500 5600 60  0000 C CNN
+F 2 "DesignFootprintLib:R_0603_HandSoldering" V 5500 5500 60  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/samsung-electro-mechanics-america-inc/RUK1608JR010CS/1276-6163-1-ND/3969135" V 5500 5500 60  0001 C CNN
+F 4 "RUK1608JR010CS" H 5500 5500 60  0001 C CNN "MPN"
+F 5 "1276-6163-1-ND" H 5500 5500 60  0001 C CNN "DigiKey"
+	1    5500 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 5500 5350 5500
+Connection ~ 4900 5500
+Wire Wire Line
+	5250 5250 5250 5500
+Connection ~ 5250 5500
+Wire Wire Line
+	5650 5500 6300 5500
+Connection ~ 6100 5500
+Wire Wire Line
+	5750 5250 5750 5500
+Connection ~ 5750 5500
+$Comp
+L D_Schottky D1
+U 1 1 5965A1AD
+P 3600 3050
+F 0 "D1" H 3600 3150 50  0000 C CNN
+F 1 "B220A" H 3600 2950 50  0000 C CNN
+F 2 "DesignFootprintLib:D_SMA" H 3600 3050 50  0001 C CNN
+F 3 "https://www.digikey.com/product-detail/en/diodes-incorporated/B220A-13-F/B220A-FDICT-ND/751528" H 3600 3050 50  0001 C CNN
+F 4 "B220A-13-F" H 3600 3050 60  0001 C CNN "MPN"
+F 5 "B220A-FDICT-ND" H 3600 3050 60  0001 C CNN "DigiKey"
+	1    3600 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L TEST T9
+U 1 1 596EE949
+P 6350 2300
+F 0 "T9" H 6350 2600 50  0000 C BNN
+F 1 "TEST" H 6350 2550 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 6350 2300 50  0001 C CNN
+F 3 "" H 6350 2300 50  0001 C CNN
+	1    6350 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST T10
+U 1 1 596EFB71
+P 7450 4600
+F 0 "T10" H 7450 4900 50  0000 C BNN
+F 1 "TEST" H 7450 4850 50  0000 C CNN
+F 2 "DesignFootprintLib:TESTPIN" H 7450 4600 50  0001 C CNN
+F 3 "" H 7450 4600 50  0001 C CNN
+	1    7450 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3050 8050 4800
+Wire Wire Line
+	7450 4600 7450 4800
+Connection ~ 7450 4800
+$EndSCHEMATC
